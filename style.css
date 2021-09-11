@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.kick-pad {
+  background: rgb(20, 212, 138);
+}
+.snare-pad {
+  background: rgb(255, 37, 103);
+}
+.hihat-pad {
+  background: rgb(15, 53, 177);
+}
+
+.kick-pad.active {
+  background: rgb(12, 114, 75);
+}
+.snare-pad.active {
+  background: rgb(167, 24, 67);
+}
+.hihat-pad.active {
+  background: rgb(10, 36, 121);
+}
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+.controls .mute {
+  padding: 0.4rem;
+  border: none;
+  background: rgb(66, 66, 66);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+.mute.active {
+  padding: 0.4rem;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+select {
+  padding: 0.4rem;
+  border: 1px solid;
+  font-size: 1rem;
+}
+.play {
+  padding: 0.8rem 5rem;
+  font-size: 1rem;
+  background: rgb(66, 66, 66);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+.play.active {
+  padding: 0.8rem 5rem;
+  font-size: 1rem;
+  background: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.tempo {
+  margin-top: 0.1rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.1rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: black;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
